@@ -1,5 +1,0 @@
-c:\users\dauh\documents\visual studio 2010\Projects\ConsoleDataObjects\ConsoleDataObjects\bin\Debug\ConsoleDataObjects.exe
-c:\users\dauh\documents\visual studio 2010\Projects\ConsoleDataObjects\ConsoleDataObjects\bin\Debug\ConsoleDataObjects.pdb
-c:\users\dauh\documents\visual studio 2010\Projects\ConsoleDataObjects\ConsoleDataObjects\obj\x86\Debug\ResolveAssemblyReference.cache
-c:\users\dauh\documents\visual studio 2010\Projects\ConsoleDataObjects\ConsoleDataObjects\obj\x86\Debug\ConsoleDataObjects.exe
-c:\users\dauh\documents\visual studio 2010\Projects\ConsoleDataObjects\ConsoleDataObjects\obj\x86\Debug\ConsoleDataObjects.pdb

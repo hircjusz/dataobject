@@ -4,6 +4,8 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using ConsoleDataObjects.Entities;
+using ConsoleDataObjects.Importers;
+using ConsoleDataObjects.Serialized;
 using DataObjects.NET;
 
 namespace ConsoleDataObjects
@@ -13,6 +15,12 @@ namespace ConsoleDataObjects
         static void Main(string[] args)
         {
             var domain = BuildDomain();
+            
+            var path = @"D:\SOURCES\dataobjects\ConsoleDataObjects\XML\StatementLineDef.xlsx";
+            var statementLineDefImporter = new StatementLineDefsImporter();
+            statementLineDefImporter.Import(path);
+
+            BuildPath(domain);
 
             //UpdatePerson(domain);
 
@@ -30,6 +38,18 @@ namespace ConsoleDataObjects
 
 
                 StatementLineDef p = (StatementLineDef)session.CreateObject(typeof(StatementLineDef));
+                p.Alias = "BILANS_A1";
+                p.DisplayName_PL = "Name";
+                p.IsOptional = true;
+                p.IsCalculated = true;
+                p.LevelName = "A";
+                p.Level = 1;
+                p.LevelOrder = 1;
+                p.RZiSFlag = true;
+                p.Segment = "SME,CTB";
+                p.SumOfLines = "";
+                p.DifferenceOfLines = "";
+
 
                 session.Commit();
             }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<StatementLineDefs>
+	<StatementLineDef>
+		<Alias>A1</Alias>
+		<DisplayName_PL>DisplayName</DisplayName_PL>
+		<DisplayName_EN>Name</DisplayName_EN>
+		<IsOptional>tak</IsOptional>
+		<IsCalculated>tak</IsCalculated>
+		<LevelName>LevelName</LevelName>
+		<Level>aa</Level>
+		<LevelOrder>aa</LevelOrder>
+		<ParentLineDef>aa</ParentLineDef>
+		<RZiSFlag>tak</RZiSFlag>
+		<Segment>SME,CTB</Segment>
+		<SumOfLines>A1,A2</SumOfLines>
+		<DifferenceOfLines>B1,B2</DifferenceOfLines>
+	</StatementLineDef>
+	<StatementLineDef>
+		<Alias>A2</Alias>
+		<DisplayName_PL>DisplayName2</DisplayName_PL>
+		<DisplayName_EN>Name2</DisplayName_EN>
+		<IsOptional>nie</IsOptional>
+		<IsCalculated>nie</IsCalculated>
+		<LevelName>LevelName2</LevelName>
+		<Level>aa</Level>
+		<LevelOrder>aa</LevelOrder>
+		<ParentLineDef>ab</ParentLineDef>
+		<RZiSFlag>nie</RZiSFlag>
+		<Segment>SME,CTB</Segment>
+		<SumOfLines>A1,A3</SumOfLines>
+		<DifferenceOfLines>B1,B3</DifferenceOfLines>
+	</StatementLineDef>
+</StatementLineDefs>

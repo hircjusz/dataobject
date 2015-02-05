@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="StatementLineDefs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="StatementLineDef" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="Alias"/>
+              <xs:element type="xs:string" name="DisplayName_PL"/>
+              <xs:element type="xs:string" name="DisplayName_EN"/>
+              <xs:element type="xs:string" name="IsOptional"/>
+              <xs:element type="xs:string" name="IsCalculated"/>
+              <xs:element type="xs:string" name="LevelName"/>
+              <xs:element type="xs:string" name="Level"/>
+              <xs:element type="xs:string" name="LevelOrder"/>
+              <xs:element type="xs:string" name="ParentLineDef"/>
+              <xs:element type="xs:string" name="RZiSFlag"/>
+              <xs:element type="xs:string" name="Segment"/>
+              <xs:element type="xs:string" name="SumOfLines"/>
+              <xs:element type="xs:string" name="DifferenceOfLines"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

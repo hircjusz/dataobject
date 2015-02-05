@@ -15,12 +15,13 @@ namespace ConsoleDataObjects
         static void Main(string[] args)
         {
             var domain = BuildDomain();
+            Session session = new Session(domain);
             
             var path = @"D:\SOURCES\dataobjects\ConsoleDataObjects\XML\StatementLineDef.xlsx";
             var statementLineDefImporter = new StatementLineDefsImporter();
-            statementLineDefImporter.Import(path);
+            statementLineDefImporter.Import(session,path);
 
-            BuildPath(domain);
+            //BuildPath(domain);
 
             //UpdatePerson(domain);
 

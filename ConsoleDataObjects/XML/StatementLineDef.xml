@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<StatementLineDefs>
-	<StatementLineDef>
+<StatementLineDefCollection>
+	<StatementLineDefElement>
 		<Alias>A1</Alias>
 		<DisplayName_PL>DisplayName</DisplayName_PL>
 		<DisplayName_EN>Name</DisplayName_EN>
@@ -14,8 +14,8 @@
 		<Segment>SME,CTB</Segment>
 		<SumOfLines>A1,A2</SumOfLines>
 		<DifferenceOfLines>B1,B2</DifferenceOfLines>
-	</StatementLineDef>
-	<StatementLineDef>
+	</StatementLineDefElement>
+	<StatementLineDefElement>
 		<Alias>A2</Alias>
 		<DisplayName_PL>DisplayName2</DisplayName_PL>
 		<DisplayName_EN>Name2</DisplayName_EN>
@@ -29,5 +29,5 @@
 		<Segment>SME,CTB</Segment>
 		<SumOfLines>A1,A3</SumOfLines>
 		<DifferenceOfLines>B1,B3</DifferenceOfLines>
-	</StatementLineDef>
-</StatementLineDefs>
+	</StatementLineDefElement>
+</StatementLineDefCollection>

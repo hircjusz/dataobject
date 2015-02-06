@@ -7,17 +7,18 @@ using System.Threading.Tasks;
 namespace ConsoleDataObjects.Serialized
 {
 
+
     /// <remarks/>
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
     [System.Xml.Serialization.XmlRootAttribute(Namespace = "", IsNullable = false)]
-    public partial class StatementLineDefCollection
+    public partial class StatementLineDefImporter
     {
 
-        private StatementLineDefCollectionStatementLineDefElement[] statementLineDefElementField;
+        private StatementLineDefImporterStatementLineDefElement[] statementLineDefElementField;
 
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("StatementLineDefElement")]
-        public StatementLineDefCollectionStatementLineDefElement[] StatementLineDefElement
+        public StatementLineDefImporterStatementLineDefElement[] StatementLineDefElement
         {
             get
             {
@@ -32,7 +33,7 @@ namespace ConsoleDataObjects.Serialized
 
     /// <remarks/>
     [System.Xml.Serialization.XmlTypeAttribute(AnonymousType = true)]
-    public partial class StatementLineDefCollectionStatementLineDefElement
+    public partial class StatementLineDefImporterStatementLineDefElement
     {
 
         private string aliasField;

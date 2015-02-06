@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<StatementLineDefCollection>
+<StatementLineDefsImport>
 	<StatementLineDefElement>
-		<Alias>A1</Alias>
+		<Alias>BILANS_A1</Alias>
 		<DisplayName_PL>DisplayName</DisplayName_PL>
 		<DisplayName_EN>Name</DisplayName_EN>
 		<IsOptional>tak</IsOptional>
@@ -30,4 +30,4 @@
 		<SumOfLines>A1,A3</SumOfLines>
 		<DifferenceOfLines>B1,B3</DifferenceOfLines>
 	</StatementLineDefElement>
-</StatementLineDefCollection>
+</StatementLineDefsImport>

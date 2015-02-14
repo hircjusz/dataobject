@@ -11,12 +11,12 @@ namespace ConsoleDataObjects.Utility
 {
     public static class UtilityActions
     {
-        public static void DoStateMachineTransition(Session session,BusinessObject entity,string fieldName) {
+        public static void DoStateMachineTransition(Session session,BusinessObject entity,string fieldName,string transistion) {
 
             WFEntityStateMachine stateMachine = null;
             IWFStateMachineHolder stateMachineHolder = (IWFStateMachineHolder)entity;
             stateMachine = stateMachineHolder.GetStateMachine(fieldName);
-            var status = stateMachine.DoTransition(session, entity, "New_Assign", new Dictionary<string,object>());
+            var status = stateMachine.DoTransition(session, entity, transistion, new Dictionary<string, object>());
         }
 
     }

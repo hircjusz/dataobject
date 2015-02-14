@@ -102,9 +102,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Shared\Shared.csproj">
-      <Project>{B306C15B-D68F-4265-A553-05C10E0A5188}</Project>
-      <Name>Shared %28Shared\Shared%29</Name>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{b306c15b-d68f-4265-a553-05c10e0a5188}</Project>
+      <Name>Shared</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -7,6 +7,7 @@ using ConsoleDataObjects.Entities;
 using ConsoleDataObjects.Importers;
 using ConsoleDataObjects.Serialized;
 using DataObjects.NET;
+using NUnit.Framework;
 
 
 namespace ConsoleDataObjects
@@ -17,27 +18,36 @@ namespace ConsoleDataObjects
         {
             var domain = BuildDomain();
             Session session = new Session(domain);
+            TestMachineState1(session);
+            
+        }
+
+        private static void TestMachineState1(Session session)
+        {
             var heading = BuildStatementHeading(session);
-            Utility.UtilityActions.DoStateMachineTransition(session, heading, "Status");
-
-
-            // var path = @"D:\SOURCES\dataobjects\ConsoleDataObjects\XML\StatementLineDef.xlsx";
-            //var statementLineDefImporter = new StatementLineDefsImporter();
-            //statementLineDefImporter.Import(session,path);
-
-            //BuildPath(domain);
-
-            //UpdatePerson(domain);
-
-            // GetPerson(domain);
-            // PersonBuilder(domain);
+            Utility.UtilityActions.DoStateMachineTransition(session, heading, "Status", "W_A");
+            Assert.AreEqual(heading.Status, "A");
+            Utility.UtilityActions.DoStateMachineTransition(session, heading, "Status", "A_H");
+            Assert.AreEqual(heading.Status, "H");
+            Utility.UtilityActions.DoStateMachineTransition(session, heading, "Status", "H_R");
+            Assert.AreEqual(heading.Status, "R");
+            Utility.UtilityActions.DoStateMachineTransition(session, heading, "Status", "R_W");
+            Assert.AreEqual(heading.Status, "W");
+            Utility.UtilityActions.DoStateMachineTransition(session, heading, "Status", "W_R");
+            Assert.AreEqual(heading.Status, "R");
+            Utility.UtilityActions.DoStateMachineTransition(session, heading, "Status", "R_W");
+            Assert.AreEqual(heading.Status, "W");
+            Utility.UtilityActions.DoStateMachineTransition(session, heading, "Status", "W_A");
+            Assert.AreEqual(heading.Status, "A");
+            Utility.UtilityActions.DoStateMachineTransition(session, heading, "Status", "A_R");
+            Assert.AreEqual(heading.Status, "R");
         }
 
 
         private static StatementHeading BuildStatementHeading(Session session)
         {
             StatementHeading p = (StatementHeading)session.CreateObject(typeof(StatementHeading));
-            //session.Commit();
+            p.Status = "W";
             return p;
 
         }

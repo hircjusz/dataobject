@@ -1,0 +1,8 @@
+﻿
+namespace SimpleWorkFlowEngine
+{
+    class WFPersistenceService
+    {
+
+    }
+}

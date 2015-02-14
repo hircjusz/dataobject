@@ -1,0 +1,111 @@
+<Template Name="testTemplate" DesingerSettings="1500,2000" OnVariableChanged="">
+  <Activities>
+    <Activity Code="C" Caption="CLOSED" Description="" Type="SoftwareMind.SimpleWorkflow.Activities.WFStateMachineEndActivity, SoftwareMind.SimpleWorkflow" DesignerSettings="55,605,40,45" StartScript="" EndScript="" ExecuteScript="" LongRunning="false">
+      <MetaDataCollection />
+    </Activity>
+    <Activity Code="X" Caption="CANCELLED" Description="" Type="SoftwareMind.SimpleWorkflow.Activities.WFStateMachineEndActivity, SoftwareMind.SimpleWorkflow" DesignerSettings="575,616,40,45" StartScript="" EndScript="" ExecuteScript="" LongRunning="false">
+      <MetaDataCollection />
+    </Activity>
+    <Activity Code="Q" Caption="REJECTED" Description="" Type="SoftwareMind.SimpleWorkflow.Activities.WFStateMachineActivity, SoftwareMind.SimpleWorkflow" DesignerSettings="55,185,40,70" StartScript="" EndScript="" ExecuteScript="" LongRunning="false">
+      <MetaDataCollection />
+    </Activity>
+    <Activity Code="R" Caption="RESOLVED" Description="" Type="SoftwareMind.SimpleWorkflow.Activities.WFStateMachineActivity, SoftwareMind.SimpleWorkflow" DesignerSettings="335,516,40,70" StartScript="" EndScript="" ExecuteScript="" LongRunning="false">
+      <MetaDataCollection />
+    </Activity>
+    <Activity Code="A" Caption="ASSIGNED" Description="" Type="SoftwareMind.SimpleWorkflow.Activities.WFStateMachineActivity, SoftwareMind.SimpleWorkflow" DesignerSettings="168,468,40,70" StartScript="" EndScript="" ExecuteScript="" LongRunning="false">
+      <MetaDataCollection />
+    </Activity>
+    <Activity Code="N" Caption="N" Description="" Type="SoftwareMind.SimpleWorkflow.Activities.WFStateMachineActivity, SoftwareMind.SimpleWorkflow" DesignerSettings="403,134,40,70" StartScript="" EndScript="" ExecuteScript="" LongRunning="false">
+      <MetaDataCollection />
+    </Activity>
+    <Activity Code="" Caption="Start" Description="" Type="SoftwareMind.SimpleWorkflow.Activities.WFStartActivity, SoftwareMind.SimpleWorkflow" DesignerSettings="125,70,40,45" StartScript="" EndScript="" ExecuteScript="" LongRunning="false">
+      <MetaDataCollection />
+    </Activity>
+  </Activities>
+  <Connectors>
+    <Connector From="Q" To="C" Code="Rejected_Close" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Zamknij" DesignerSettings="75;255;75;605;75;605" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="Q" To="X" Code="Rejected_Cancel" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Anuluj" DesignerSettings="87;255;87;293;587;293;587;616" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="Q" To="A" Code="Rejected_Assign" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Przypisz ponownie" DesignerSettings="83;255;83;304;118;304;118;400;179;400;179;468" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="R" To="C" Code="Resolved_Close" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Zamknij" DesignerSettings="345;586;345;614;143;614;143;550;81;550;81;605" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="R" To="X" Code="Resolved_Cancel" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Anuluj" DesignerSettings="375;575;576;575;576;616" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="R" To="A" Code="Resolved_Assign" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Przypisz ponownie" DesignerSettings="355;516;355;470;257;470;257;582;188;582;188;538" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="A" To="Q" Code="Assigned_Reject" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Odrzuć" DesignerSettings="179;468;179;432;83;432;83;255" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="A" To="R" Code="Assigned_Resolve" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Rozwiąż" DesignerSettings="188;538;188;566;289;566;289;486;355;486;355;516" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="A" To="X" Code="Assigned_Cancel" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Anuluj" DesignerSettings="201;538;201;603;577;603;577;587;586;587;586;616" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="N" To="A" Code="New_Assign" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Przypisz" DesignerSettings="414;204;414;442;196;442;196;468" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="N" To="X" Code="New_Cancel" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Anuluj" DesignerSettings="429;204;429;271;591;271;591;616" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+    <Connector From="" To="N" Code="Start" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="" DesignerSettings="145;115;145;152;359;152;359;88;423;88;423;134" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+      <Conditions />
+      <Policies />
+      <MetaDataCollection />
+      <DialogBoxValueMaping />
+      <DialogBoxParameters />
+    </Connector>
+  </Connectors>
+</Template>

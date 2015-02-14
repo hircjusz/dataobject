@@ -1,0 +1,38 @@
+﻿<Template Name="FulProcess" Version="1">
+  <Activities>
+    <Activity Code="START" Name="START" Description="START" Type="SimpleWorkFlowEngine.Activities.WFStartActivity" DesignerSettings="0,0,0,0">
+      <MetaData Key="STAGE" Value="APP" />
+    </Activity>
+    <Activity Code="REGISTER_APP" Name="Zarejestruj wnioski (DORADCA)" Description="Zarejestruj wnioski (DORADCA)" Type="SimpleWorkFlowEngine.Activities.WFUserActivity" DesignerSettings="0,0,0,0">
+      <MetaData Key="STAGE" Value="APP" />
+    </Activity>
+    <Activity Code="GATHER_CL_DOCS" Name="Skompletuj dokumenty klienta (DORADCA)" Description="Skompletuj dokumenty klienta (DORADCA)" Type="SimpleWorkFlowEngine.Activities.WFUserActivity" DesignerSettings="0,0,0,0" >
+      <MetaData Key="STAGE" Value="APP" />
+    </Activity>
+    <Activity Code="PREP_FIN_DATA" Name="Przygotowanie danych finansowych(DORADCA/AB)" Description="Przygotowanie danych finansowych(DORADCA/AB)" Type="SimpleWorkFlowEngine.Activities.WFUserActivity" DesignerSettings="0,0,0,0" >
+      <MetaData Key="STAGE" Value="APP" />
+    </Activity>
+    <Activity Code="SEND_TO_GRM" Name="Wyślij dokumenty do GRM (DORADCA)" Description="Wyślij dokumenty do GRM (DORADCA)" Type="SimpleWorkFlowEngine.Activities.WFUserActivity" DesignerSettings="0,0,0,0" >
+      <MetaData Key="STAGE" Value="PRELIMINARY_ANALYSIS" />
+    </Activity>
+    <Activity Code="PREP_APP" Name="Przygotuj aplikacje kredytową" Description="Przygotuj aplikacje kredytową" Type="SimpleWorkFlowEngine.Activities.WFUserActivity" DesignerSettings="0,0,0,0" >
+      <MetaData Key="STAGE" Value="PRELIMINARY_ANALYSIS" />
+    </Activity>
+    <Activity Code="FINISH" Name="FINISH" Description="FINISH" Type="SimpleWorkFlowEngine.Activities.WFEndActivity" DesignerSettings="0,0,0,0" >
+      <MetaData Key="STAGE" Value="FINISH" />
+    </Activity>
+  </Activities>
+  <Connectors>
+    <Connector From="START" To="REGISTER_APP" Caption="Zakoncz" />
+    <Connector From="REGISTER_APP" To="GATHER_CL_DOCS" Caption="Zakoncz" />
+    <Connector From="GATHER_CL_DOCS" To="PREP_FIN_DATA" Caption="Zakoncz" />
+    <Connector From="PREP_FIN_DATA" To="SEND_TO_GRM" Caption="Tak" >
+        <Condition Type="SoftwareMind.SimpleWorkflow.Conditions.WFCondition" Expression="False"/>
+    </Connector>
+    <Connector From="PREP_FIN_DATA" To="PREP_APP" Caption="Nie">
+      <Condition Type="SoftwareMind.SimpleWorkflow.Conditions.WFCondition" Expression="True"/>
+    </Connector>
+    <Connector From="PREP_APP" To="FINISH" Caption="Zakoncz" />
+    <Connector From="SEND_TO_GRM" To="FINISH" Caption="Zakoncz" />
+  </Connectors>
+</Template>

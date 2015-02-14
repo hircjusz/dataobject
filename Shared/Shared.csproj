@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B306C15B-D68F-4265-A553-05C10E0A5188}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SoftwareMind.Shared</RootNamespace>
+    <AssemblyName>SoftwareMind.Shared</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\SoftwareMind.Shared.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\SoftwareMind.Shared.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DataObjects.NET">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ExternalLibraries\DataObjects.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\ExternalLibraries\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MefContrib, Version=1.2.2.0, Culture=neutral, PublicKeyToken=61319b4ffd6fe6d3, processorArchitecture=MSIL">
+      <HintPath>..\packages\MefContrib.1.2.2.1\lib\net40-Client\MefContrib.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\packages\CommonServiceLocator.1.0\lib\NET35\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity">
+      <HintPath>..\packages\Unity.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception">
+      <HintPath>..\packages\Unity.Interception.2.1.505.2\lib\NET35\Microsoft.Practices.Unity.Interception.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\ExternalLibraries\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCache.cs" />
+    <Compile Include="Collections\CommaSeparatedValueCollection.cs" />
+    <Compile Include="Config\IApplicationConfig.cs" />
+    <Compile Include="Config\ITextResourcesServiceConfig.cs" />
+    <Compile Include="Dto\AttachmentDTO.cs" />
+    <Compile Include="Infrastructure\Config\ConfigurationAttribute.cs" />
+    <Compile Include="Infrastructure\Config\ConfigurationProxyBehavior.cs" />
+    <Compile Include="Infrastructure\Config\ConfigurationWrapper.cs" />
+    <Compile Include="Infrastructure\Config\ConfigurationExportProvider.cs" />
+    <Compile Include="Dto\AccessStoreActionDTO.cs" />
+    <Compile Include="Dto\ColumnFilterDTO.cs" />
+    <Compile Include="Dto\CountStoreActionDTO.cs" />
+    <Compile Include="Dto\CreateStoreActionDTO.cs" />
+    <Compile Include="Dto\DeleteStoreActionDTO.cs" />
+    <Compile Include="Dto\IStoreActionDTO.cs" />
+    <Compile Include="Dto\ModifyStoreActionDTO.cs" />
+    <Compile Include="Dto\ReadStoreActionDTO.cs" />
+    <Compile Include="Dto\SortDirection.cs" />
+    <Compile Include="Dto\SortDTO.cs" />
+    <Compile Include="Dto\StoreActionDTOBinder.cs" />
+    <Compile Include="Dto\StoreActionDTOBinderProvider.cs" />
+    <Compile Include="Dto\UpdateStoreActionDTO.cs" />
+    <Compile Include="Exceptions\AuthorizationException.cs" />
+    <Compile Include="Exceptions\ExceptionCategory.cs" />
+    <Compile Include="Exceptions\SecurityException.cs" />
+    <Compile Include="Exceptions\TranslatedApplicationException.cs" />
+    <Compile Include="Exceptions\ValidationException.cs" />
+    <Compile Include="Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DoubleExtensions.cs" />
+    <Compile Include="Extensions\IDataRecordExtensions.cs" />
+    <Compile Include="Extensions\IDictionaryExtensions.cs" />
+    <Compile Include="Extensions\IEnumerableExtensions.cs" />
+    <Compile Include="Extensions\LambdaEqualityComparer.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\Xml\XElementExtensions.cs" />
+    <Compile Include="Fail.cs" />
+    <Compile Include="Helper\ReflectionHelper.cs" />
+    <Compile Include="Helper\SessionHelper.cs" />
+    <Compile Include="Infrastructure\AuthInfoBase.cs" />
+    <Compile Include="Infrastructure\IActiveDirectoryService.cs" />
+    <Compile Include="Infrastructure\ICredentialService.cs" />
+    <Compile Include="Infrastructure\ICurrentUserResolver.cs" />
+    <Compile Include="Infrastructure\IAuthInfo.cs" />
+    <Compile Include="Infrastructure\IContainer.cs" />
+    <Compile Include="Infrastructure\IContext.cs" />
+    <Compile Include="Infrastructure\ICurrentUser.cs" />
+    <Compile Include="Infrastructure\INamedFilterProvider.cs" />
+    <Compile Include="Infrastructure\ISessionWrapper.cs" />
+    <Compile Include="Infrastructure\IStatement.cs" />
+    <Compile Include="Infrastructure\IStatementInvoker.cs" />
+    <Compile Include="Infrastructure\IStatementInvokerFactory.cs" />
+    <Compile Include="Infrastructure\IUserEntryResolver.cs" />
+    <Compile Include="Injector.cs" />
+    <Compile Include="Interception\ActionCacheAttribute.cs" />
+    <Compile Include="Interception\AnonymousServiceInterceptor.cs" />
+    <Compile Include="LogLevel.cs" />
+    <Compile Include="Mef\AbstractWezyrCatalog.cs" />
+    <Compile Include="Mef\ExportProviders\InstanceExportProvider.cs" />
+    <Compile Include="Mef\ExportWithMetadataAttribute.cs" />
+    <Compile Include="Mef\IWezyrServiceLocator.cs" />
+    <Compile Include="Mef\ServiceLocator.cs" />
+    <Compile Include="Mef\WezyrServiceLocator.cs" />
+    <Compile Include="Messaging\EventPublisher.cs" />
+    <Compile Include="Messaging\IEventPublisher.cs" />
+    <Compile Include="Messaging\ISubscriber.cs" />
+    <Compile Include="Networking\NetworkConnection.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\AbstractPathResolver.cs" />
+    <Compile Include="Service\IAddAttachmentService.cs" />
+    <Compile Include="Service\IAnonymousService.cs" />
+    <Compile Include="Service\IAttachmentsImportService.cs" />
+    <Compile Include="Service\IAuthorizationService.cs" />
+    <Compile Include="Service\IAuthorizationTicketService.cs" />
+    <Compile Include="Service\IDateTimeProvider.cs" />
+    <Compile Include="Service\IDecisionLvlService.cs" />
+    <Compile Include="Service\IDictionaryService.cs" />
+    <Compile Include="Service\IProcessService.cs" />
+    <Compile Include="Service\IProcTaskService.cs" />
+    <Compile Include="Service\IPZProcessService.cs" />
+    <Compile Include="Service\IRunnable.cs" />
+    <Compile Include="Service\TextResourcesService.cs" />
+    <Compile Include="Templating\DefaultTemplatingEngineHost.cs" />
+    <Compile Include="Templating\TemplatingHelper.cs" />
+    <Compile Include="Utils\ResX.cs" />
+    <None Include="packages.config" />
+    <None Include="Serialization\DtoConverter.cs" />
+    <Compile Include="Serialization\JavaScriptSerializer.cs" />
+    <Compile Include="Serialization\JsonSerializerHelper.cs" />
+    <Compile Include="Service\ILegacyService.cs" />
+    <Compile Include="Service\IPathResolver.cs" />
+    <Compile Include="Service\IService.cs" />
+    <Compile Include="Service\ITextResourcesService.cs" />
+    <Compile Include="Service\NamedFilterAttribute.cs" />
+    <Compile Include="Service\NonTransactionalAttribute.cs" />
+    <Compile Include="Interception\ServiceInterceptor.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -8,6 +8,7 @@ using ConsoleDataObjects.Importers;
 using ConsoleDataObjects.Serialized;
 using DataObjects.NET;
 
+
 namespace ConsoleDataObjects
 {
     class Program
@@ -16,10 +17,13 @@ namespace ConsoleDataObjects
         {
             var domain = BuildDomain();
             Session session = new Session(domain);
-            
-            var path = @"D:\SOURCES\dataobjects\ConsoleDataObjects\XML\StatementLineDef.xlsx";
-            var statementLineDefImporter = new StatementLineDefsImporter();
-            statementLineDefImporter.Import(session,path);
+            var heading = BuildStatementHeading(session);
+            Utility.UtilityActions.DoStateMachineTransition(session, heading, "Status");
+
+
+            // var path = @"D:\SOURCES\dataobjects\ConsoleDataObjects\XML\StatementLineDef.xlsx";
+            //var statementLineDefImporter = new StatementLineDefsImporter();
+            //statementLineDefImporter.Import(session,path);
 
             //BuildPath(domain);
 
@@ -28,6 +32,16 @@ namespace ConsoleDataObjects
             // GetPerson(domain);
             // PersonBuilder(domain);
         }
+
+
+        private static StatementHeading BuildStatementHeading(Session session)
+        {
+            StatementHeading p = (StatementHeading)session.CreateObject(typeof(StatementHeading));
+            //session.Commit();
+            return p;
+
+        }
+
 
         private static void BuildPath(Domain domain)
         {
@@ -119,7 +133,7 @@ namespace ConsoleDataObjects
 
             //Domain domain = new Domain(connectionUrl, productKey);
 
-            Domain domain = DataObjects.NET.Configuration.DefaultDomain;//new Domain(connectionUrl, productKeyFile);
+            Domain domain = DataObjects.NET.Configuration.DefaultDomain;
             // Domain setup process starts here
             //domain.RegisterCulture(
             //new Culture("En", "U.S. English", new CultureInfo("en-us", false)));

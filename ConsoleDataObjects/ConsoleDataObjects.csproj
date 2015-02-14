@@ -47,6 +47,10 @@
     <Reference Include="ExcelLib">
       <HintPath>..\..\fortis_4\dev\WezyrApplication\Logic\Common\ExcelLib\bin\Debug\ExcelLib.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\fortis_4\dev\WezyrApplication\Presentation\Common\MVApplication\bin\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.OracleClient" />
@@ -57,15 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\StatementHeading.cs" />
+    <Compile Include="ObjectsDomain\BusinessObject.cs" />
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\StatementLineDef.cs" />
     <Compile Include="Importers\StatementLineDefsImporter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialized\StatementLineDefImporter.cs" />
+    <Compile Include="StateMachine\IWFStateMachineHolder.cs" />
+    <Compile Include="StateMachine\WFEntityStateMachine.cs" />
+    <Compile Include="Utility\UtilityActions.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="productKey.txt" />
+    <None Include="StateMachineTemplate\StatmentMachine.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <Content Include="XML\StatementLineDef.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -77,6 +89,24 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Builders\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Scripts\Scripts.csproj">
+      <Project>{94c69989-27bd-41cf-8f92-6e9d2f501086}</Project>
+      <Name>Scripts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{b306c15b-d68f-4265-a553-05c10e0a5188}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleWorkflow.Tests\SimpleWorkflow.Tests.csproj">
+      <Project>{99cd13ab-bf1e-4f81-8439-550d90ceb6df}</Project>
+      <Name>SimpleWorkflow.Tests</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SimpleWorkflow\SimpleWorkflow.csproj">
+      <Project>{f0a70edc-0d88-4aaf-b446-120b985b819f}</Project>
+      <Name>SimpleWorkflow</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

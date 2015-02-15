@@ -1,4 +1,4 @@
-<Template Name="testTemplate" DesingerSettings="1500,2000" OnVariableChanged="">
+﻿<Template Name="testTemplate" DesingerSettings="1500,2000" OnVariableChanged="">
   <Activities>
     <Activity Code="R" Caption="REMOVED&#xD;&#xA;" Description="" Type="SoftwareMind.SimpleWorkflow.Activities.WFStateMachineActivity, SoftwareMind.SimpleWorkflow" DesignerSettings="115,286,48,58" StartScript="" EndScript="" ExecuteScript="" LongRunning="false">
       <MetaDataCollection />
@@ -17,7 +17,7 @@
     </Activity>
   </Activities>
   <Connectors>
-    <Connector From="R" To="W" Code="R_W" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Przywroc" DesignerSettings="163;310;366;310;366;270;402;270" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
+    <Connector From="R" To="W" Code="R_W" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Przywroc" DesignerSettings="163;310;366;310;366;270;402;270" ConditionScript="@CanMove" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
       <Conditions />
       <Policies />
       <MetaDataCollection />
@@ -33,7 +33,9 @@
     </Connector>
     <Connector From="W" To="A" Code="W_A" DialogBoxName="" SingleInstance="False" IsSystem="False" IsActiveWithoutTodos="False" Caption="Publikuj" DesignerSettings="418;296;418;360;394;360;394;398" ConditionScript="" PolicyScript="" ConnectorBehaviour="SoftwareMind.SimpleWorkflow.Behaviours.WFStandardConnectorBehaviour, SoftwareMind.SimpleWorkflow" DestinationSplitter="" MainPath="false" Order="10" DeleteParentPath="0" ShowAsButton="False">
       <Conditions />
-      <Policies />
+      <Policies >
+        <PolicyRule Type="ConsoleDataObjects.Policy.StatementActualPolicy, ConsoleDataObjects" />
+      </Policies>
       <MetaDataCollection />
       <DialogBoxValueMaping />
       <DialogBoxParameters />

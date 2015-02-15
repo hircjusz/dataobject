@@ -70,6 +70,7 @@
     <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\StatementLineDef.cs" />
     <Compile Include="Importers\StatementLineDefsImporter.cs" />
+    <Compile Include="Policy\StatementActualPolicy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Serialized\StatementLineDefImporter.cs" />

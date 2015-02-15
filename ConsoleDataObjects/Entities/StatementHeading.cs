@@ -35,6 +35,7 @@ namespace ConsoleDataObjects.Entities
 
         public virtual Dictionary<string, object> PrepareVariables(DataObjects.NET.Session session, WFEntityStateMachine stateMachine, Dictionary<string, object> variables)
         {
+            variables["CanMove"] = false;
             return variables;
         }
 

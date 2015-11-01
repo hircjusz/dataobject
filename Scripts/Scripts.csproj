@@ -64,7 +64,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="log4net">
-      <HintPath>..\..\..\..\..\..\SOURCES\fortis_4\dev\WezyrApplication\Presentation\Common\MVApplication\bin\log4net.dll</HintPath>
+      <HintPath>..\Externals\log4net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

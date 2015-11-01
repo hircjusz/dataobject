@@ -40,20 +40,19 @@
     <Reference Include="DataObjects.NET">
       <HintPath>ExternalLibraries\DataObjects.NET.dll</HintPath>
     </Reference>
-    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\fortis_4\dev\WezyrApplication\ExternalLibraries\DocumentFormat.OpenXml.dll</HintPath>
+    <Reference Include="DocumentFormat.OpenXml">
+      <HintPath>..\Externals\DocumentFormat.OpenXml.dll</HintPath>
     </Reference>
     <Reference Include="ExcelLib">
-      <HintPath>..\..\fortis_4\dev\WezyrApplication\Logic\Common\ExcelLib\bin\Debug\ExcelLib.dll</HintPath>
+      <HintPath>..\Externals\ExcelLib.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=1.2.11.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\fortis_4\dev\WezyrApplication\Presentation\Common\MVApplication\bin\log4net.dll</HintPath>
+      <HintPath>..\Externals\log4net.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework, Version=2.5.10.11092, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Shared\bin\x86\Debug\nunit.framework.dll</HintPath>
+      <HintPath>..\Externals\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
